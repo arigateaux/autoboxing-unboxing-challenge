@@ -51,14 +51,14 @@ public class Bank {
         if (branch != null) {
             System.out.println("Customer details for branch " + branch.getName());
             ArrayList<Customer> branchCustomerList = branch.getCustomerList();
-            for (int i = 0; i < branchList.size(); i++) {
+            for (int i = 0; i <= branchList.size(); i++) {
                 Customer branchCustomer = branchCustomerList.get(i);
                 System.out.println("Customer: " + branchCustomer.getName() + "[" + i + "]");
                 if (showTransactions) {
                     System.out.println("Transactions:");
                     ArrayList<Double> customerTransactionList = branchCustomer.getTransactionList();
                     for (int j = 0; j < customerTransactionList.size(); j++) {
-                        System.out.println("[" + ( j + 1 ) + "]  Amount: " + customerTransactionList.get(j));
+                        System.out.println("[" + (j + 1) + "]  Amount: " + customerTransactionList.get(j));
                     }
                 }
             }
